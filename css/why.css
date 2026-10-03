@@ -1,0 +1,75 @@
+/* ============================================================
+   why.css — Why — section 'Mengapa Penting'
+   ============================================================ */
+
+.why-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.why-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.why-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--gold));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition);
+}
+
+.why-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+.why-card:hover::after {
+    transform: scaleX(1);
+}
+
+.why-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+}
+
+.why-card h3 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--navy);
+}
+
+.why-card p {
+    font-size: 0.87rem;
+    color: var(--gray-500);
+    line-height: 1.7;
+}
+
+/* ============================================================
+   CALCULATOR SECTION
+============================================================ */

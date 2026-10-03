@@ -1,0 +1,50 @@
+/* ============================================================
+   cta.css — CTA — banner ajakan
+   ============================================================ */
+
+.cta-banner {
+    position: relative;
+    padding: 80px 0;
+    background: var(--navy);
+    overflow: hidden;
+}
+
+.cta-orb {
+    display: none;
+}
+
+.cta-orb-1,
+.cta-orb-2 {
+    display: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: var(--white);
+    margin-bottom: 16px;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.cta-content p {
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 520px;
+    margin: 0 auto 32px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */

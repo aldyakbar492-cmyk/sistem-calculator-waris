@@ -1,0 +1,454 @@
+/* ============================================================
+   responsive.css — Responsive — media query tablet & mobile (dimuat paling akhir)
+   ============================================================ */
+
+/* CATATAN: baris bertanda [NONAKTIF] adalah deklarasi yang di style.css asli tidak pernah
+   berlaku (selalu tertimpa rule base yang ditulis lebih akhir). Dikomentari agar tampilan
+   tetap identik. Hapus tanda komentar jika ingin mengaktifkannya (itu akan mengubah tampilan). */
+
+/* ============================================================
+   RESPONSIVE — TABLET (≤ 1024px)
+============================================================ */
+
+@media (max-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hero-visual {
+        height: 380px;
+        width: 100%;
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .edu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .calc-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (≤ 768px)
+============================================================ */
+
+@media (max-width: 768px) {
+
+    .nav-links,
+    .btn-nav-cta.nav-cta-desktop {
+        display: none;
+    }
+
+    /* Hide the desktop dark mode button on mobile */
+    #darkModeBtn {
+        display: none;
+    }
+
+    /* Show the mobile controls (dark mode toggle + hamburger) */
+    .nav-mobile-controls {
+        display: flex;
+    }
+
+    .dark-mode-btn-mobile {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero {
+        padding: 108px 0 64px;
+    }
+
+    .hero-stats {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn-primary,
+    .hero-actions .btn-outline {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .edu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .harta-summary-grid {
+        /* [NONAKTIF] grid-template-columns: 1fr 1fr; */
+    }
+
+    /* Footer mobile: stack kolom secara vertikal */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-bottom: 40px;
+    }
+
+    .footer-brand {
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-col h4 {
+        margin-bottom: 12px;
+    }
+
+    .footer-col ul {
+        gap: 8px;
+    }
+
+    .footer-bottom {
+        padding: 20px 0;
+        gap: 10px;
+    }
+
+    .footer-disclaimer {
+        font-size: 0.73rem;
+        padding: 12px 14px;
+    }
+
+    .footer-copy {
+        font-size: 0.72rem;
+        padding-bottom: 12px;
+    }
+
+    .footer {
+        padding: 48px 0 0;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-actions a {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+        height: 320px;
+    }
+
+    .float-1 {
+        bottom: 20px;
+        left: -8px;
+    }
+
+    .float-2 {
+        bottom: -8px;
+        right: 0;
+    }
+
+    .float-3 {
+        top: 0;
+        right: -8px;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .why-section,
+    .calc-section,
+    .edu-section,
+    .table-section,
+    .faq-section {
+        padding: 64px 0;
+    }
+
+    .calc-form-panel {
+        padding: 24px 16px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .detail-rows {
+        /* [NONAKTIF] grid-template-columns: 1fr; */
+    }
+
+    .ahliwaris-right {
+        /* [NONAKTIF] min-width: 110px; */
+    }
+
+    .modal-box {
+        /* [NONAKTIF] padding: 28px 20px; */
+        margin: 16px;
+        /* [NONAKTIF] border-radius: var(--radius-lg); */
+    }
+
+    /* Prevent table overflow */
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Number input full width on mobile */
+    .number-input-row {
+        width: 100%;
+    }
+
+    /* Toggle buttons wrap better */
+    .toggle-row {
+        gap: 8px;
+    }
+
+    .toggle-label {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    /* Nav container padding tighter */
+    .nav-container {
+        padding: 0 16px;
+    }
+
+    /* Hero stats: smaller gap */
+    .stat-num {
+        font-size: 1.35rem;
+    }
+
+    /* CTA banner padding */
+    .cta-banner {
+        padding: 60px 0;
+    }
+
+    /* Section header sub smaller */
+    .section-sub {
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-badge {
+        font-size: 0.7rem;
+    }
+
+    .main-card {
+        width: 270px;
+    }
+
+    .calc-form-panel {
+        padding: 20px 14px;
+    }
+
+    .harta-summary-grid {
+        /* [NONAKTIF] grid-template-columns: 1fr; */
+    }
+
+    .float-card {
+        min-width: 130px;
+    }
+
+    .ahliwaris-right {
+        /* [NONAKTIF] min-width: 100px; */
+    }
+
+    .ahliwaris-total {
+        /* [NONAKTIF] font-size: 0.92rem; */
+    }
+
+    h1 {
+        font-size: clamp(1.7rem, 7vw, 2.4rem);
+    }
+
+    h2 {
+        font-size: clamp(1.4rem, 5vw, 2rem);
+    }
+
+    /* Hero section tighter */
+    .hero {
+        padding: 96px 0 52px;
+    }
+
+    /* Why cards padding smaller */
+    .why-card {
+        padding: 24px 20px;
+    }
+
+    /* Edu cards padding smaller */
+    .edu-card {
+        padding: 22px 18px;
+    }
+
+    /* FAQ cards padding smaller */
+    .faq-card {
+        padding: 22px 18px;
+    }
+
+    /* Form section title smaller */
+    .form-section-title {
+        font-size: 0.9rem;
+    }
+
+    /* Breakdown label wrap fix */
+    .breakdown-label {
+        min-width: 80px;
+        font-size: 0.78rem;
+    }
+
+    .breakdown-amount {
+        min-width: 85px;
+        font-size: 0.8rem;
+    }
+
+    /* Result panel on small screens */
+    #resultSummaryBox {
+        /* [NONAKTIF] padding: 16px 14px; */
+    }
+
+    /* Ahli waris items on tiny screen */
+    .ahliwaris-item {
+        /* [NONAKTIF] padding: 12px 12px; */
+        /* [NONAKTIF] gap: 8px; */
+    }
+
+    .ahliwaris-nama {
+        /* [NONAKTIF] font-size: 0.88rem; */
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .calc-form-panel {
+        padding: 18px 12px;
+    }
+
+    .toggle-label {
+        padding: 7px 10px;
+        font-size: 0.78rem;
+    }
+
+    .form-section-title {
+        gap: 8px;
+        font-size: 0.85rem;
+    }
+
+    .breakdown-label {
+        min-width: 70px;
+    }
+
+    .breakdown-amount {
+        min-width: 80px;
+        font-size: 0.78rem;
+    }
+
+    .hero-stats {
+        gap: 10px;
+    }
+
+    .stat-num {
+        font-size: 1.2rem;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .main-card {
+        width: 240px;
+    }
+
+    .float-card {
+        display: none;
+    }
+
+    .hero-visual {
+        height: 260px;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    h1 {
+        font-size: clamp(1.55rem, 7.5vw, 2rem);
+    }
+
+    h2 {
+        font-size: clamp(1.3rem, 5.5vw, 1.7rem);
+    }
+}
+
+@media (max-width: 900px) {
+    .ebook-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .ebook-toc {
+        /* [NONAKTIF] position: static; */
+    }
+}
+
+/* ── Kalkulator: panel hasil menempel di sisi kanan (layar lebar) ──
+   Agar loading & hasil selalu terlihat saat pengguna berada di tombol "Hitung".
+   Di layar <= 1024px layout menumpuk, jadi tidak berlaku. */
+@media (min-width: 1025px) {
+    /* html & body sama-sama overflow-x:hidden membuat body menjadi scroll container
+       sehingga "sticky" tidak jalan; "clip" tetap memotong overflow tanpa efek itu. */
+    body {
+        overflow-x: clip;
+    }
+
+    .calc-result-panel {
+        position: sticky;
+        top: 90px;
+        max-height: calc(100vh - 110px);
+        overflow-y: auto;
+    }
+
+    /* cegah kartu menyusut/saling menimpa di dalam panel yang bisa di-scroll */
+    .calc-result-panel > * {
+        flex-shrink: 0;
+    }
+}

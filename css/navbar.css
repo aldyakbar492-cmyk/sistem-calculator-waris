@@ -1,0 +1,203 @@
+/* ============================================================
+   navbar.css — Navbar — navigasi, hamburger, mobile menu, state scroll
+   ============================================================ */
+
+/* ============================================================
+   NAVBAR
+============================================================ */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: var(--navy);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+.nav-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 1.3rem;
+    color: var(--white);
+    flex-shrink: 0;
+}
+
+.logo-icon {
+    font-size: 1.4rem;
+}
+
+.logo-text {
+    font-weight: 900;
+    color: var(--white);
+}
+
+.logo-accent {
+    color: var(--gold-light);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.65);
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: white;
+    transition: 0.5s;
+}
+
+.btn-nav-cta {
+    background: var(--gold);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.btn-nav-cta:hover {
+    background: var(--gold-light);
+    color: var(--navy);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.4);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 10;
+}
+
+/* Mobile controls wrapper: dark mode + hamburger side by side */
+.nav-mobile-controls {
+    display: none;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.dark-mode-btn-mobile {
+    display: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition:
+        transform 0.28s ease,
+        opacity 0.22s ease;
+}
+
+.mobile-menu {
+    overflow: hidden;
+    max-height: 0;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0 16px;
+    border-top: 1px solid transparent;
+    background: var(--navy);
+    transition:
+        max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        padding 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.mobile-menu.open {
+    max-height: 360px;
+    padding: 10px 16px 16px;
+    border-top-color: rgba(255, 255, 255, 0.08);
+    display: flex;
+}
+
+.mobile-link {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.72);
+    padding: 11px 14px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    display: block;
+    width: 100%;
+}
+
+.mobile-link:hover {
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-cta {
+    margin-top: 6px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 11px 20px;
+    border-radius: var(--radius-md);
+}
+
+/* ============================================================
+   HERO
+============================================================ */
+
+/* Hamburger open state */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.hamburger span {
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+/* Navbar scrolled state */
+.navbar.scrolled {
+    background: rgba(10, 18, 35, 0.98);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}

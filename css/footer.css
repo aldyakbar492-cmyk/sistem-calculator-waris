@@ -1,0 +1,116 @@
+/* ============================================================
+   footer.css — Footer
+   ============================================================ */
+
+.footer {
+    background: #0f172a;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 72px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+    margin-bottom: 16px;
+    display: block;
+}
+
+.footer-logo .logo-text {
+    color: #ffffff;
+}
+
+.footer-logo .logo-accent {
+    color: var(--gold-light);
+}
+
+.footer-brand p {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.75;
+    margin-bottom: 20px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 8px;
+}
+
+.social-btn {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.social-btn:hover {
+    background: var(--blue);
+    color: #ffffff;
+}
+
+.footer-col h4 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-col ul li,
+.footer-col ul li a {
+    font-size: 0.83rem;
+    color: rgba(255, 255, 255, 0.75);
+    transition: var(--transition);
+}
+
+.footer-col ul li a:hover {
+    color: #3b82f6;
+}
+
+.footer-bottom {
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-disclaimer {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.65;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-disclaimer strong {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding-bottom: 8px;
+}

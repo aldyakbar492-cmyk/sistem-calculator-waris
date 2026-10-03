@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Waris Modern — Kalkulator & Edukasi Waris Indonesia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <!-- ==================== STYLESHEETS (css/) ==================== -->
+    <!-- Fondasi -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <!-- Section & komponen -->
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/why.css" />
+    <link rel="stylesheet" href="css/calculator.css" />
+    <link rel="stylesheet" href="css/education.css" />
+    <link rel="stylesheet" href="css/table.css" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <link rel="stylesheet" href="css/cta.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <!-- Tema & responsive (urutan terakhir = prioritas cascade) -->
+    <link rel="stylesheet" href="css/dark-mode.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#beranda" class="nav-logo">
+          <span class="logo-text">Waris<span class="logo-accent">Modern</span></span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+          <li><a href="#edukasi" class="nav-link">Edukasi</a></li>
+          <li><a href="#kalkulator" class="nav-link">Kalkulator</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="https://saran-kritik.vercel.app" class="nav-link">kritik&saran</a></li>
+        </ul>
+
+        <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0">
+          <button id="darkModeBtn" class="dark-mode-btn" aria-label="Toggle dark mode" title="Mode Gelap">🌙</button>
+          <a href="#kalkulator" class="btn-nav-cta nav-cta-desktop">Mulai Hitung</a>
+        </div>
+
+        <div class="nav-mobile-controls">
+          <button id="darkModeBtnHamburger" class="dark-mode-btn dark-mode-btn-mobile" aria-label="Toggle dark mode" title="Mode Gelap">🌙</button>
+          <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu" role="navigation">
+        <a href="#beranda" class="mobile-link">Beranda</a>
+        <a href="#edukasi" class="mobile-link">Edukasi</a>
+        <a href="#kalkulator" class="mobile-link">Kalkulator</a>
+        <a href="#faq" class="mobile-link">FAQ</a>
+        <a href="#kalkulator" class="btn-nav-cta mobile-cta">Mulai Hitung</a>
+      </div>
+    </nav>
+
+    <main id="app">
+    <!-- ################ HALAMAN (TAB): BERANDA ################ -->
+    <div class="page-view active" id="page-beranda" data-page="beranda">
+      <!-- ==================== HERO ==================== -->
+      <section class="hero" id="beranda">
+        <div class="hero-bg-grid"></div>
+
+        <div class="container hero-container">
+          <!-- Kiri: Teks -->
+          <div class="hero-content">
+            <div class="hero-badge">Berdasarkan Kompilasi Hukum Islam (KHI) Indonesia</div>
+            <h1 class="hero-title">
+              Pahami Pembagian Waris<br />
+              <span class="title-highlight">Lebih Mudah &</span><br />
+              Transparan
+            </h1>
+            <p class="hero-subtitle">Pelajari edukasi waris modern dan hitung pembagian harta secara praktis, jelas, dan mudah dipahami — sesuai hukum Islam & perdata Indonesia.</p>
+            <div class="hero-actions">
+              <a href="#edukasi" class="btn-primary">Belajar Dulu</a>
+              <a href="#kalkulator" class="btn-outline">Hitung Warisan →</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-num">3</span>
+                <span class="stat-label">Sistem Hukum Waris</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num">14</span>
+                <span class="stat-label">Bab Materi Lengkap</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Sesuai KHI & KUHPerdata</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kanan: Ilustrasi SVG -->
+          <div class="hero-visual">
+            <div class="visual-card main-card">
+              <div class="card-header-strip"></div>
+              <div class="card-icon-row">
+                <div class="card-icon-box gold">⚖</div>
+                <div class="card-label">Surat Keterangan Waris</div>
+              </div>
+              <div class="card-divider"></div>
+              <div class="card-row">
+                <span class="card-key">Pewaris</span>
+                <span class="card-val">Bpk. Arman</span>
+              </div>
+              <div class="card-row">
+                <span class="card-key">Total Harta Bersih</span>
+                <span class="card-val blue">Rp 540.000.000</span>
+              </div>
+              <div class="card-row">
+                <span class="card-key">Ahli Waris</span>
+                <span class="card-val">5 Orang</span>
+              </div>
+              <div class="card-divider"></div>
+              <div class="mini-ahli-list">
+                <div class="mini-ahli"><span class="mini-dot gold"></span>Istri — Rp 60 jt</div>
+                <div class="mini-ahli"><span class="mini-dot blue"></span>Ayah — Rp 80 jt</div>
+                <div class="mini-ahli"><span class="mini-dot" style="background: var(--navy)"></span>Ibu — Rp 80 jt</div>
+                <div class="mini-ahli"><span class="mini-dot" style="background: var(--blue-light)"></span>2 Anak Pr. — Rp 320 jt</div>
+              </div>
+              <div class="card-badge">Sah Secara Hukum</div>
+            </div>
+
+            <div class="visual-card float-card float-1">
+              <span class="float-icon">🏠</span>
+              <div>
+                <div class="float-title">Harta Tetap</div>
+                <div class="float-val">Rumah + Tanah</div>
+              </div>
+            </div>
+            <div class="visual-card float-card float-2">
+              <span class="float-icon">📋</span>
+              <div>
+                <div class="float-title">Sistem Hukum</div>
+                <div class="float-val">KHI / Faraidh</div>
+              </div>
+            </div>
+            <div class="visual-card float-card float-3">
+              <span class="float-icon">👨‍👩‍👧‍👦</span>
+              <div>
+                <div class="float-title">Ahli Waris</div>
+                <div class="float-val">Keluarga Inti</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== WHY IMPORTANT ==================== -->
+      <section class="why-section" id="mengapa">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Mengapa Penting</div>
+            <h2 class="section-title">Kenapa Pembagian Waris<br />Itu Penting?</h2>
+            <p class="section-sub">Banyak keluarga hancur karena salah urus warisan. Kenali risiko dan solusinya.</p>
+          </div>
+
+          <div class="why-grid">
+            <div class="why-card">
+              <div class="why-icon" style="background: var(--blue-pale)">⚖</div>
+              <h3>Mencegah Konflik Keluarga</h3>
+              <p>Pembagian yang jelas dan legal mencegah perselisihan, perebutan aset, dan keretakan hubungan antar anggota keluarga yang bisa berlangsung bertahun-tahun.</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon" style="background: var(--gold-pale)">📜</div>
+              <h3>Menjaga Keadilan Hakiki</h3>
+              <p>Setiap ahli waris memiliki porsi hak yang ditentukan hukum. Pembagian yang adil menjamin tidak ada pihak yang dirugikan atau terpinggirkan.</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon" style="background: var(--blue-pale)">🛡</div>
+              <h3>Melindungi Kelompok Rentan</h3>
+              <p>Anak yatim, janda, dan duda berhak mendapat kepastian ekonomi. Hukum waris memastikan mereka tetap terlindungi setelah ditinggal pewaris.</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon" style="background: var(--gold-pale)">⚡</div>
+              <h3>Kepastian Hukum &amp; Hak</h3>
+              <p>Dengan memahami hak waris secara legal, setiap ahli waris dapat mengklaim haknya dengan dasar hukum yang kuat di hadapan notaris maupun pengadilan.</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon" style="background: var(--blue-pale)">🏠</div>
+              <h3>Pengelolaan Aset yang Tepat</h3>
+              <p>Harta peninggalan — dari properti, usaha, hingga aset digital — perlu dikelola dan dialihkan secara sistematis agar tidak terbengkalai atau disengketakan.</p>
+            </div>
+            <div class="why-card">
+              <div class="why-icon" style="background: var(--gold-pale)">💼</div>
+              <h3>Aset Digital &amp; Modern</h3>
+              <p>Di era digital, kripto, e-wallet, hak cipta, dan akun media sosial monetisasi juga termasuk harta waris yang perlu dihitung dan dialihkan sesuai hukum.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CTA ==================== -->
+      <section class="cta-banner">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Siap Menghitung Pembagian Warisan?</h2>
+            <p>Gunakan kalkulator kami yang sudah disesuaikan dengan Kompilasi Hukum Islam Indonesia — termasuk penanganan kasus Aul dan Radd.</p>
+            <div class="cta-actions">
+              <a href="#kalkulator" class="btn-primary-white">Hitung Sekarang →</a>
+              <a href="#edukasi" class="btn-outline-white">Pelajari Dulu</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ################ HALAMAN (TAB): KALKULATOR ################ -->
+    <div class="page-view" id="page-kalkulator" data-page="kalkulator">
+      <!-- ==================== CALCULATOR ==================== -->
+      <section class="calc-section" id="kalkulator">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Kalkulator</div>
+            <h2 class="section-title">Hitung Pembagian Warisan<br />Sesuai Hukum Islam (KHI)</h2>
+            <p class="section-sub">Masukkan data ahli waris dan harta, sistem kami akan menghitung sesuai Kompilasi Hukum Islam — termasuk penyesuaian Aul & Radd.</p>
+          </div>
+
+          <div class="calc-wrapper">
+            <!-- Form Panel -->
+            <div class="calc-form-panel">
+              <div class="calc-form-section">
+                <h3 class="form-section-title"><span class="form-step">01</span>Data Harta Peninggalan</h3>
+
+                <div class="form-group">
+                  <label class="form-label">Total Harta Kotor (Rp)</label>
+                  <div class="input-wrapper">
+                    <span class="input-prefix">Rp</span>
+                    <input type="text" class="form-input" placeholder="Contoh: 600.000.000" id="hartaKotor" />
+                  </div>
+                  <span class="form-hint">Semua aset: rumah, tanah, kendaraan, tabungan, dll.</span>
+                </div>
+
+                <div class="form-row-2">
+                  <div class="form-group">
+                    <label class="form-label">Hutang Pewaris (Rp)</label>
+                    <div class="input-wrapper">
+                      <span class="input-prefix">Rp</span>
+                      <input type="text" class="form-input" placeholder="0" id="hutang" />
+                    </div>
+                    <span class="form-hint">Cicilan KPR, hutang bank, dll.</span>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Wasiat (Rp)</label>
+                    <div class="input-wrapper">
+                      <span class="input-prefix">Rp</span>
+                      <input type="text" class="form-input" placeholder="0" id="wasiat" />
+                    </div>
+                    <span class="form-hint">Maks 1/3 dari harta bersih</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Biaya Pemakaman (Rp)</label>
+                  <div class="input-wrapper">
+                    <span class="input-prefix">Rp</span>
+                    <input type="text" class="form-input" placeholder="Contoh: 10.000.000" id="pemakaman" />
+                  </div>
+                  <span class="form-hint">Kafan, peti, makam, prosesi pemakaman.</span>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <div class="form-divider"></div>
+
+              <div class="calc-form-section">
+                <h3 class="form-section-title"><span class="form-step">02</span>Data Ahli Waris</h3>
+
+                <!-- Pasangan -->
+                <div class="ahli-group">
+                  <div class="ahli-group-title">Pasangan Pewaris</div>
+                  <div class="toggle-row">
+                    <div class="toggle-option">
+                      <input type="radio" name="pasangan" id="adaIstri" value="istri" />
+                      <label for="adaIstri" class="toggle-label"> <span class="toggle-icon">👩</span>Ada Istri </label>
+                    </div>
+                    <div class="toggle-option">
+                      <input type="radio" name="pasangan" id="adaSuami" value="suami" />
+                      <label for="adaSuami" class="toggle-label"> <span class="toggle-icon">👨</span>Ada Suami </label>
+                    </div>
+                    <div class="toggle-option">
+                      <input type="radio" name="pasangan" id="tidakAdaPasangan" value="tidak" checked />
+                      <label for="tidakAdaPasangan" class="toggle-label"> <span class="toggle-icon">–</span>Tidak Ada </label>
+                    </div>
+                  </div>
+                  <!-- Jumlah Istri (muncul jika ada istri) -->
+                  <div class="conditional-field" id="jmlIstriField">
+                    <label class="form-label" style="margin-top: 12px">Jumlah Istri</label>
+                    <div class="number-input-row">
+                      <button class="num-btn" type="button">−</button>
+                      <input type="number" class="num-input" value="1" min="1" max="4" id="jmlIstri" />
+                      <button class="num-btn" type="button">+</button>
+                    </div>
+                    <span class="form-hint">Jika lebih dari satu, porsi 1/4 atau 1/8 dibagi rata.</span>
+                  </div>
+                </div>
+
+                <!-- Anak -->
+                <div class="ahli-group">
+                  <div class="ahli-group-title">Anak Kandung</div>
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label class="form-label">Anak Laki-laki</label>
+                      <div class="number-input-row">
+                        <button class="num-btn" type="button">−</button>
+                        <input type="number" class="num-input" value="0" min="0" id="anakLaki" />
+                        <button class="num-btn" type="button">+</button>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Anak Perempuan</label>
+                      <div class="number-input-row">
+                        <button class="num-btn" type="button">−</button>
+                        <input type="number" class="num-input" value="0" min="0" id="anakPerempuan" />
+                        <button class="num-btn" type="button">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Orang Tua -->
+                <div class="ahli-group">
+                  <div class="ahli-group-title">Orang Tua Pewaris</div>
+                  <div class="toggle-row">
+                    <div class="toggle-option">
+                      <input type="checkbox" id="adaAyah" />
+                      <label for="adaAyah" class="toggle-label"> <span class="toggle-icon">👴</span>Ada Ayah </label>
+                    </div>
+                    <div class="toggle-option">
+                      <input type="checkbox" id="adaIbu" />
+                      <label for="adaIbu" class="toggle-label"> <span class="toggle-icon">👵</span>Ada Ibu </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Kakek & Nenek -->
+                <div class="ahli-group">
+                  <div class="ahli-group-title">Kakek &amp; Nenek (dari pihak Ayah)</div>
+                  <div class="toggle-row">
+                    <div class="toggle-option">
+                      <input type="checkbox" id="adaKakek" />
+                      <label for="adaKakek" class="toggle-label"> <span class="toggle-icon">👴</span>Ada Kakek </label>
+                    </div>
+                    <div class="toggle-option">
+                      <input type="checkbox" id="adaNenek" />
+                      <label for="adaNenek" class="toggle-label"> <span class="toggle-icon">👵</span>Ada Nenek </label>
+                    </div>
+                  </div>
+                  <span class="form-hint">Hanya berlaku jika Ayah tidak ada.</span>
+                </div>
+
+                <!-- Saudara Kandung -->
+                <div class="ahli-group">
+                  <div class="ahli-group-title">Saudara Kandung Pewaris</div>
+                  <div class="form-row-2">
+                    <div class="form-group">
+                      <label class="form-label">Saudara Laki-laki Kandung</label>
+                      <div class="number-input-row">
+                        <button class="num-btn" type="button">−</button>
+                        <input type="number" class="num-input" value="0" min="0" id="saudaraLaki" />
+                        <button class="num-btn" type="button">+</button>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label">Saudara Perempuan Kandung</label>
+                      <div class="number-input-row">
+                        <button class="num-btn" type="button">−</button>
+                        <input type="number" class="num-input" value="0" min="0" id="saudaraPerempuan" />
+                        <button class="num-btn" type="button">+</button>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="form-hint">Saudara terhalang (hijab) oleh: Ayah, Anak Laki-laki, atau Kakek.</span>
+                </div>
+              </div>
+
+              <button class="btn-hitung" type="button" id="btnHitung">
+                <span>Hitung Warisan</span>
+                <span class="btn-arrow">→</span>
+              </button>
+
+            <!-- Instruksi setelah perhitungan selesai (diisi oleh js/calculator.js) -->
+            <div class="calc-notice" id="calcNotice" role="status" aria-live="polite" style="display: none"></div>
+            </div>
+
+            <!-- Hasil Panel -->
+            <div class="calc-result-panel" id="resultPanel">
+              <div class="result-header">
+                <div class="result-title-row">
+                  <h3>Hasil Simulasi Pembagian</h3>
+                </div>
+                <div class="result-disclaimer">Estimasi berdasarkan KHI (Kompilasi Hukum Islam)</div>
+              </div>
+
+              <!-- Ringkasan Harta -->
+              <div class="result-summary-box" id="resultSummaryBox">
+                <div class="placeholder-state">
+                  <div class="placeholder-icon" style="font-size: 2.4rem; opacity: 0.3; margin-bottom: 12px">⚖</div>
+                  <p>Isi data di sebelah kiri, lalu klik <strong>Hitung Warisan</strong> untuk melihat hasil pembagian yang sesuai hukum Islam.</p>
+                </div>
+              </div>
+
+              <!-- Breakdown Ahli Waris -->
+              <div class="result-breakdown" id="resultBreakdown" style="display: none">
+                <!-- Diisi oleh JS nanti -->
+              </div>
+
+              <!-- Catatan Hukum -->
+              <div class="result-law-note" id="resultLawNote" style="display: none">
+                <!-- Diisi oleh JS nanti -->
+              </div>
+
+              <!-- Panel Penjelasan Hasil -->
+              <div id="hasilPenjelasanPanel" style="display: none"></div>
+
+              <!-- Download PDF Button — hidden until calculated -->
+              <div id="downloadPdfWrap" style="display: none; margin-top: 4px">
+                <button class="btn-download-pdf" id="btnDownloadPdf">
+                  <span>⬇</span>
+                  <span>Download Laporan Waris (PDF)</span>
+                </button>
+              </div>
+
+              <!-- Urutan Pembagian Info -->
+              <div class="result-info-box">
+                <div class="info-box-title">Urutan Pembersihan Harta</div>
+                <div class="info-steps">
+                  <div class="info-step">
+                    <span class="step-num">1</span>
+                    <span>Biaya Pemakaman</span>
+                  </div>
+                  <div class="step-arrow">↓</div>
+                  <div class="info-step">
+                    <span class="step-num">2</span>
+                    <span>Pelunasan Hutang</span>
+                  </div>
+                  <div class="step-arrow">↓</div>
+                  <div class="info-step">
+                    <span class="step-num">3</span>
+                    <span>Wasiat (maks 1/3)</span>
+                  </div>
+                  <div class="step-arrow">↓</div>
+                  <div class="info-step active">
+                    <span class="step-num">4</span>
+                    <span>Harta Bersih Siap Waris</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ################ HALAMAN (TAB): EDUKASI ################ -->
+    <div class="page-view" id="page-edukasi" data-page="edukasi">
+      <!-- ==================== EDUCATION ==================== -->
+      <section class="edu-section" id="edukasi">
+        <div class="container">
+          <!-- VIEW: GRID KARTU (default) -->
+          <div id="viewGrid">
+            <div class="section-header">
+              <div class="section-tag">Materi Edukasi</div>
+              <h2 class="section-title">Pelajari Dasar-Dasar<br />Hukum Waris Indonesia</h2>
+              <p class="section-sub">14 bab materi lengkap, disusun dari dasar hingga perhitungan kompleks. Bahasa kasual, akurat secara hukum.</p>
+            </div>
+            <div style="text-align: center; margin-bottom: 32px">
+              <button class="btn-ebook-cta" id="btnEbookMode">📖 Baca Seluruh Bab Secara Runtut (E-Book Mode)</button>
+            </div>
+            <div class="edu-grid" id="eduGrid">
+              <!-- Kartu akan dirender oleh JavaScript -->
+            </div>
+
+            <div class="edu-footer-cta" style="margin-top: 40px">
+              <button class="btn-ebook-cta" id="btnEbookMode2">📖 Baca Seluruh Bab Secara Runtut (E-Book Mode)</button>
+            </div>
+          </div>
+          <!-- /viewGrid -->
+
+          <!-- VIEW: E-BOOK MODE -->
+          <div id="viewEbook" style="display: none">
+            <div class="ebook-header">
+              <button class="btn-back-grid" id="btnBackGrid">← Kembali ke Menu Bab</button>
+              <div>
+                <h2 class="ebook-title">📖 Modul Edukasi Waris Modern</h2>
+                <p class="ebook-subtitle">Baca dari Bab 1 hingga Bab 14 secara runtut</p>
+              </div>
+            </div>
+            <div class="ebook-layout">
+              <!-- Sidebar TOC -->
+              <nav class="ebook-toc" id="ebookToc"></nav>
+              <!-- Content -->
+              <div class="ebook-content" id="ebookContent"></div>
+            </div>
+          </div>
+          <!-- /viewEbook -->
+        </div>
+      </section>
+
+      <!-- ==================== EDUCATION MODAL ==================== -->
+      <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-box">
+          <button class="modal-close" id="modalClose" aria-label="Tutup">✕</button>
+          <div id="modalBody"></div>
+        </div>
+      </div>
+
+      <!-- ==================== INHERITANCE TABLE ==================== -->
+      <section class="table-section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">Referensi Cepat</div>
+            <h2 class="section-title">Tabel Porsi Ahli Waris<br />Kompilasi Hukum Islam</h2>
+            <p class="section-sub">Ringkasan porsi pecahan setiap ahli waris berdasarkan kondisi yang ada.</p>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="waris-table">
+              <thead>
+                <tr>
+                  <th>Ahli Waris</th>
+                  <th>Kondisi Ada Anak</th>
+                  <th>Kondisi Tidak Ada Anak</th>
+                  <th>Keterangan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="table-badge blue">Suami</span></td>
+                  <td class="fraction">¼</td>
+                  <td class="fraction">½</td>
+                  <td>Porsi pasangan saat istri meninggal</td>
+                </tr>
+                <tr>
+                  <td><span class="table-badge purple">Istri</span></td>
+                  <td class="fraction">⅛</td>
+                  <td class="fraction">¼</td>
+                  <td>Jika lebih dari 1 istri, dibagi rata</td>
+                </tr>
+                <tr>
+                  <td><span class="table-badge gold">Ayah</span></td>
+                  <td class="fraction">⅙</td>
+                  <td class="td-asabah">Asabah (sisa)</td>
+                  <td>Ayah mengambil sisa jika tidak ada anak</td>
+                </tr>
+                <tr>
+                  <td><span class="table-badge teal">Ibu</span></td>
+                  <td class="fraction">⅙</td>
+                  <td class="fraction">⅓</td>
+                  <td>1/6 jika ada 2+ saudara pun ada anak</td>
+                </tr>
+                <tr>
+                  <td><span class="table-badge green">Anak Laki-laki</span></td>
+                  <td colspan="2" class="td-asabah">Asabah (sisa) — rasio 2:1 vs anak perempuan</td>
+                  <td>Selalu ambil sisa setelah pasangan & ortu</td>
+                </tr>
+                <tr>
+                  <td><span class="table-badge rose">Anak Perempuan</span></td>
+                  <td class="fraction">Asabah (2:1)</td>
+                  <td class="fraction">½ (tunggal) / ⅔ (≥2)</td>
+                  <td>2/3 dibagi rata jika anak perempuan ≥2 dan tidak ada anak laki-laki</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-note">
+            <span>⚠</span>
+            <p>
+              Jika total porsi melebihi 100% (<strong>Aul</strong>), penyebut diubah menyesuaikan pembilang agar pembagian tetap proporsional. Jika ada sisa setelah semua porsi terpenuhi (<strong>Radd</strong>), sisa dikembalikan kepada ahli
+              waris secara proporsional.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ################ HALAMAN (TAB): FAQ ################ -->
+    <div class="page-view" id="page-faq" data-page="faq">
+      <!-- ==================== FAQ ==================== -->
+      <section class="faq-section" id="faq">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag">FAQ</div>
+            <h2 class="section-title">Pertanyaan yang Sering<br />Ditanyakan</h2>
+            <p class="section-sub">Jawaban atas kebingungan paling umum seputar hukum waris di Indonesia.</p>
+          </div>
+
+          <div class="faq-grid">
+            <div class="faq-card">
+              <div class="faq-q">
+                <span class="faq-icon">🧒</span>
+                Bagaimana status anak angkat dalam pembagian warisan?
+              </div>
+              <p class="faq-a">
+                Anak angkat tidak mendapatkan harta waris utama berdasarkan hukum darah (nasab). Namun, hak ekonominya dilindungi melalui jalur <strong>Wasiat Wajibah</strong> dengan porsi maksimal <strong>1/3</strong> dari total harta
+                peninggalan orang tua angkat.
+              </p>
+            </div>
+
+            <div class="faq-card">
+              <div class="faq-q">
+                <span class="faq-icon">🏠</span>
+                Harta peninggalan hanya 1 unit rumah, bagaimana dibagi?
+              </div>
+              <p class="faq-a">
+                Rumah tersebut dinilai harga pasarnya (<em>appraisal</em>). Pilihan: (a) salah satu ahli waris membeli porsi hak ahli waris lain (menebus), atau (b) rumah dijual ke pihak luar lalu uang hasil penjualan dibagi sesuai porsi
+                masing-masing.
+              </p>
+            </div>
+
+            <div class="faq-card">
+              <div class="faq-q">
+                <span class="faq-icon">👶</span>
+                Apakah anak luar kawin berhak mendapatkan warisan?
+              </div>
+              <p class="faq-a">
+                Berdasarkan Putusan MK No. 46/PUU-VIII/2010, anak luar kawin memiliki hubungan perdata dengan ibu dan keluarga ibunya. Terhadap ayah, sepanjang dapat dibuktikan melalui <strong>tes DNA</strong> atau keputusan pengadilan.
+              </p>
+            </div>
+
+            <div class="faq-card">
+              <div class="faq-q">
+                <span class="faq-icon">🤝</span>
+                Bolehkah ahli waris sepakat bagi rata secara damai?
+              </div>
+              <p class="faq-a">
+                Boleh. Dalam hukum Islam disebut <strong>Takharuj</strong> atau <strong>Islah</strong>. Syarat utamanya: semua ahli waris <em>wajib mengetahui porsi asli mereka terlebih dahulu</em>, kemudian secara sukarela menyepakati
+                pembagian berbeda demi keharmonisan keluarga.
+              </p>
+            </div>
+
+            <div class="faq-card">
+              <div class="faq-q">
+                <span class="faq-icon">💰</span>
+                Bagaimana jika pewaris memiliki hutang lebih besar dari harta?
+              </div>
+              <p class="faq-a">
+                Jika hutang melebihi total aset, ahli waris <strong>tidak wajib menanggung sisa hutang</strong> dari kantong pribadi mereka. Hutang diselesaikan sebatas harta yang ada, sisanya menjadi tanggung jawab pewaris di hadapan Allah
+                (dalam konteks hukum Islam).
+              </p>
+            </div>
+
+            <div class="faq-card">
+              <div class="faq-q">
+                <span class="faq-icon">💎</span>
+                Apakah aset kripto dan aset digital termasuk warisan?
+              </div>
+              <p class="faq-a">
+                Ya. Aset digital seperti <strong>kripto, saldo e-wallet, hak cipta digital, royalti, dan nama domain premium</strong> termasuk dalam kategori harta warisan di era modern. Diperlukan akses akun/private key agar bisa diproses
+                sebagai harta waris.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a href="#beranda" class="nav-logo footer-logo">
+              <span class="logo-text">Waris<span class="logo-accent">Modern</span></span>
+            </a>
+            <p>Platform edukasi dan kalkulator waris digital Indonesia. Membantu keluarga memahami dan menyelesaikan pembagian harta peninggalan secara adil, transparan, dan sesuai hukum.</p>
+            <div class="footer-socials">
+              <a href="https://Facebook.com/Aldy Akbar" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://instagram.com/aldyyy_akbar" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="social-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+
+          <!-- Navigasi -->
+          <div class="footer-col">
+            <h4>Navigasi</h4>
+            <ul>
+              <li><a href="#beranda">Beranda</a></li>
+              <li><a href="#edukasi">Materi Edukasi</a></li>
+              <li><a href="#kalkulator">Kalkulator Waris</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Materi -->
+          <div class="footer-col">
+            <h4>Topik Edukasi</h4>
+            <ul>
+              <li><a href="#">Hukum Waris Islam</a></li>
+              <li><a href="#">Hukum Waris Perdata</a></li>
+              <li><a href="#">Ahli Waris & Porsi</a></li>
+              <li><a href="#">Wasiat & Hibah</a></li>
+              <li><a href="#">Sengketa Waris</a></li>
+              <li><a href="#">Aset Digital & Kripto</a></li>
+            </ul>
+          </div>
+
+          <!-- Kontak -->
+          <div class="footer-col">
+            <h4>Kontak &amp; Info</h4>
+            <ul>
+              <li>aldy.akbar492@gmail.com.</li>
+              <li>085211787041</li>
+              <li>bandung, Indonesia</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-disclaimer">
+            <strong>Disclaimer Hukum:</strong> Informasi dan hasil kalkulator pada platform ini bersifat edukatif dan tidak merupakan nasihat hukum resmi. Untuk kepastian hukum, konsultasikan dengan notaris, pengacara, atau hakim Pengadilan
+            Agama yang berwenang.
+          </div>
+          <div class="footer-copy">© 2025 WarisModern. Seluruh konten disusun berdasarkan Kompilasi Hukum Islam (KHI) dan KUHPerdata Indonesia.</div>
+        </div>
+      </div>
+    </footer>
+    <!-- ==================== SCRIPTS ==================== -->
+    <!-- Library eksternal (dipakai fitur Download PDF) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <!-- Satu entry point ES Module: js/main.js meng-import seluruh module lainnya -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

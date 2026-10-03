@@ -1,0 +1,98 @@
+/* ============================================================
+   base.css — Base — reset, body, scrollbar, tipografi dasar, link
+   ============================================================ */
+
+/* ── Reset & Base ────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background: var(--bg-page);
+    color: var(--gray-700);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+* {
+    max-width: 100%;
+}
+
+/* Fix elements that shouldn't be constrained by max-width: 100% */
+.navbar,
+.hero,
+.footer,
+.cta-banner,
+.why-section,
+.calc-section,
+.edu-section,
+.table-section,
+.faq-section,
+body,
+html {
+    max-width: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--navy-light);
+}
+
+/* ── Typography ──────────────────────────────────────────── */
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+    color: var(--navy);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

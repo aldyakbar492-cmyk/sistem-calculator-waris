@@ -1,0 +1,130 @@
+/* ============================================================
+   table.css — Table — tabel porsi waris (referensi cepat)
+   ============================================================ */
+
+.table-section {
+    padding: 100px 0;
+    background: var(--gray-50);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
+}
+
+.waris-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.87rem;
+    background: var(--white);
+}
+
+.waris-table thead tr {
+    background: var(--navy);
+}
+
+.waris-table thead th {
+    padding: 16px 20px;
+    text-align: left;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.waris-table tbody tr {
+    border-bottom: 1px solid var(--gray-100);
+    transition: var(--transition);
+}
+
+.waris-table tbody tr:hover {
+    background: var(--gray-50);
+}
+
+.waris-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.waris-table td {
+    padding: 16px 20px;
+    color: var(--gray-500);
+    vertical-align: middle;
+}
+
+.table-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.table-badge.blue {
+    background: var(--blue-pale);
+    color: var(--blue);
+}
+
+.table-badge.purple {
+    background: var(--blue-pale);
+    color: var(--blue);
+}
+
+.table-badge.gold {
+    background: var(--gold-pale);
+    color: var(--gold);
+}
+
+.table-badge.teal {
+    background: var(--blue-pale);
+    color: var(--blue);
+}
+
+.table-badge.green {
+    background: var(--blue-pale);
+    color: var(--navy);
+}
+
+.table-badge.rose {
+    background: var(--gold-pale);
+    color: var(--gold);
+}
+
+.fraction {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.td-asabah {
+    font-weight: 600;
+    color: var(--blue);
+    font-style: italic;
+}
+
+.table-note {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: var(--blue-pale);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    margin-top: 20px;
+    font-size: 0.82rem;
+    color: var(--gray-600);
+    line-height: 1.65;
+}
+
+.table-note span {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* ============================================================
+   FAQ SECTION
+============================================================ */

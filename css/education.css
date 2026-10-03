@@ -1,0 +1,569 @@
+/* ============================================================
+   education.css — Education — kartu bab, modal detail, e-book mode
+   ============================================================ */
+
+/* Summary harta bersih — defined below in tambahan styles */
+.edu-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.edu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.edu-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.edu-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gray-200);
+    transition: var(--transition);
+}
+
+.edu-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.edu-card:hover::before {
+    background: linear-gradient(90deg, var(--blue), var(--blue-light));
+}
+
+.edu-card-featured {
+    background: linear-gradient(135deg, var(--navy), #1a2e4a);
+    border-color: var(--navy);
+    color: var(--white);
+}
+
+.edu-card-featured::before {
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+}
+
+.edu-card-featured h3,
+.edu-card-featured p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.edu-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.edu-icon {
+    font-size: 1.8rem;
+}
+
+.edu-bab {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-400);
+    background: var(--gray-100);
+    padding: 4px 10px;
+    border-radius: 99px;
+}
+
+.edu-card-featured .edu-bab {
+    color: var(--gold-light);
+    background: rgba(251, 191, 36, 0.15);
+}
+
+.edu-card h3 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.4;
+}
+
+.edu-card p {
+    font-size: 0.83rem;
+    color: var(--gray-500);
+    line-height: 1.65;
+    flex: 1;
+}
+
+.edu-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.edu-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 99px;
+    background: var(--gray-100);
+    color: var(--gray-500);
+}
+
+.edu-tag.gold {
+    background: var(--gold-pale);
+    color: var(--gold);
+}
+
+.edu-link {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--blue);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.edu-card-featured .edu-link {
+    color: var(--gold-light);
+}
+
+.edu-link:hover {
+    gap: 8px;
+}
+
+.edu-footer-cta {
+    text-align: center;
+}
+
+/* Edu insight box */
+.edu-insight {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    font-size: 0.78rem;
+    color: var(--gray-600);
+    line-height: 1.55;
+}
+
+.edu-insight-dark {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.edu-insight-icon {
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* ============================================================
+   TABLE SECTION
+============================================================ */
+
+/* ============================================================
+         BTN E-BOOK CTA
+      ============================================================ */
+
+.btn-ebook-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    color: var(--white);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 16px 36px;
+    border-radius: var(--radius-lg);
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    transition: var(--transition);
+    box-shadow: 0 6px 24px rgba(37, 99, 235, 0.28);
+}
+
+.btn-ebook-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(37, 99, 235, 0.42);
+}
+
+/* ============================================================
+         MODAL OVERLAY & BOX
+      ============================================================ */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(10, 18, 35, 0.72);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-box {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 780px;
+    max-height: 88vh;
+    overflow-y: auto;
+    padding: 48px 52px;
+    transform: translateY(24px) scale(0.97);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal-overlay.active .modal-box {
+    transform: translateY(0) scale(1);
+}
+
+.modal-close {
+    position: sticky;
+    float: right;
+    top: 0;
+    background: var(--gray-100);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--gray-700);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: var(--navy);
+    color: var(--white);
+}
+
+/* Modal body typography */
+.modal-bab-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--blue);
+    background: var(--blue-pale);
+    padding: 5px 14px;
+    border-radius: 99px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.modal-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--navy);
+    line-height: 1.25;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--gray-100);
+}
+
+.modal-section {
+    margin-bottom: 32px;
+}
+
+.modal-section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-400);
+    margin-bottom: 14px;
+}
+
+.modal-section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--gray-200);
+}
+
+.modal-narasi {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--gray-700);
+}
+
+.modal-narasi p+p {
+    margin-top: 12px;
+}
+
+.modal-dalil {
+    background: linear-gradient(135deg, #f0f4ff, #fef9f0);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 20px 24px;
+    font-size: 0.92rem;
+    line-height: 1.85;
+    color: var(--navy);
+}
+
+.modal-dalil cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.78rem;
+    color: var(--gray-400);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.modal-problematika {
+    font-size: 0.92rem;
+    line-height: 1.85;
+    color: var(--gray-700);
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+}
+
+.modal-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--gray-100);
+}
+
+.modal-nav-btn {
+    background: var(--gray-100);
+    border: none;
+    padding: 10px 22px;
+    border-radius: var(--radius-md);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--navy);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-nav-btn:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.modal-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* ============================================================
+         E-BOOK MODE
+      ============================================================ */
+
+.ebook-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.btn-back-grid {
+    background: var(--gray-100);
+    border: none;
+    padding: 12px 22px;
+    border-radius: var(--radius-md);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 0.87rem;
+    font-weight: 700;
+    color: var(--navy);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--transition);
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.btn-back-grid:hover {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.ebook-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    color: var(--navy);
+    margin-bottom: 6px;
+}
+
+.ebook-subtitle {
+    color: var(--gray-400);
+    font-size: 0.87rem;
+}
+
+.ebook-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Sidebar TOC */
+.ebook-toc {
+    position: sticky;
+    top: 88px;
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 20px 0;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+.ebook-toc-header {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gray-400);
+    padding: 0 20px 12px;
+    border-bottom: 1px solid var(--gray-200);
+    margin-bottom: 8px;
+}
+
+.ebook-toc-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 20px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--gray-500);
+    cursor: pointer;
+    transition: var(--transition);
+    border-left: 3px solid transparent;
+    line-height: 1.35;
+}
+
+.ebook-toc-link:hover {
+    color: var(--blue);
+    background: var(--blue-pale);
+}
+
+.ebook-toc-link.active {
+    color: var(--blue);
+    font-weight: 700;
+    border-left-color: var(--blue);
+    background: var(--blue-pale);
+}
+
+.toc-num {
+    font-weight: 800;
+    color: var(--gray-300);
+    font-size: 0.75rem;
+    width: 18px;
+    flex-shrink: 0;
+}
+
+/* Ebook chapters */
+.ebook-chapter {
+    margin-bottom: 72px;
+    scroll-margin-top: 100px;
+}
+
+.chapter-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--gray-100);
+}
+
+.chapter-icon-big {
+    font-size: 2.4rem;
+    flex-shrink: 0;
+}
+
+.chapter-bab-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--blue);
+    background: var(--blue-pale);
+    padding: 4px 12px;
+    border-radius: 99px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.chapter-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    color: var(--navy);
+    line-height: 1.2;
+}
+
+.chapter-body .modal-section {
+    margin-bottom: 28px;
+}
+
+.chapter-body .modal-section-title {
+    font-size: 0.75rem;
+    margin-bottom: 12px;
+}
+
+.chapter-body .modal-narasi {
+    font-size: 0.93rem;
+}
+
+.chapter-divider {
+    border: none;
+    border-top: 1px dashed var(--gray-200);
+    margin: 72px 0 0;
+}
+
+/* Scrollbar for ebook toc */
+.ebook-toc::-webkit-scrollbar {
+    width: 4px;
+}
+
+.ebook-toc::-webkit-scrollbar-thumb {
+    background: var(--gray-200);
+    border-radius: 99px;
+}

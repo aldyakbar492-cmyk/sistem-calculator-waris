@@ -1,0 +1,565 @@
+/* ============================================================
+   dark-mode.css — Dark Mode — tombol toggle & seluruh override tema gelap
+   ============================================================ */
+
+/* ============================================================
+         DARK MODE TOGGLE
+      ============================================================ */
+
+.dark-mode-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.dark-mode-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================================
+         DARK MODE — UNIVERSAL SURFACE OVERRIDES
+      ============================================================ */
+
+[data-theme="dark"] body {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .hero {
+    background: linear-gradient(165deg, #0d1f3c 0%, #0f172a 60%, #1a1200 100%);
+}
+
+[data-theme="dark"] .hero-bg-grid {
+    opacity: 0.08;
+}
+
+[data-theme="dark"] .why-section,
+[data-theme="dark"] .edu-section,
+[data-theme="dark"] .faq-section {
+    background: #0f172a;
+}
+
+[data-theme="dark"] .calc-section,
+[data-theme="dark"] .table-section {
+    background: #0a111e;
+}
+
+[data-theme="dark"] .why-card {
+    background: #1e293b;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .why-card h3 {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .why-card p {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .calc-form-panel {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .form-section-title {
+    color: #f8fafc;
+    border-bottom-color: #334155;
+}
+
+[data-theme="dark"] .form-label {
+    color: #cbd5e1;
+}
+
+[data-theme="dark"] .input-wrapper {
+    background: #0f172a;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .input-prefix {
+    background: #263348;
+    border-right-color: #334155;
+    color: #64748b;
+}
+
+[data-theme="dark"] .form-input {
+    color: #f8fafc;
+    background: transparent;
+}
+
+[data-theme="dark"] .form-hint {
+    color: #64748b;
+}
+
+[data-theme="dark"] .toggle-label {
+    background: #0f172a;
+    border-color: #334155;
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .toggle-label:hover {
+    border-color: var(--blue-light);
+    color: var(--blue-light);
+}
+
+[data-theme="dark"] .toggle-option input:checked+.toggle-label {
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--blue-light);
+    border-color: var(--blue-light);
+}
+
+[data-theme="dark"] .number-input-row {
+    border-color: #334155;
+}
+
+[data-theme="dark"] .num-btn {
+    background: #263348;
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .num-input {
+    background: #0f172a;
+    color: #f8fafc;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .result-summary-box {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .result-info-box {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .info-box-title {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .info-step {
+    color: #64748b;
+}
+
+[data-theme="dark"] .info-step.active {
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--blue-light);
+}
+
+[data-theme="dark"] .edu-card {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .edu-card h3 {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .edu-card p {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .edu-bab {
+    background: #263348;
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .edu-tag {
+    background: #263348;
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .edu-insight {
+    background: #263348;
+    border-color: #334155;
+    color: #cbd5e1;
+}
+
+[data-theme="dark"] .table-wrapper {
+    border-color: #334155;
+}
+
+[data-theme="dark"] .waris-table {
+    background: #1e293b;
+}
+
+[data-theme="dark"] .waris-table tbody tr {
+    border-bottom-color: #334155;
+}
+
+[data-theme="dark"] .waris-table tbody tr:hover {
+    background: #263348;
+}
+
+[data-theme="dark"] .waris-table td {
+    color: #cbd5e1;
+}
+
+[data-theme="dark"] .table-note {
+    background: rgba(37, 99, 235, 0.1);
+    border-color: rgba(59, 130, 246, 0.2);
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .faq-card {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .faq-q {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .faq-a {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .faq-a strong {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .visual-card {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .card-key {
+    color: #64748b;
+}
+
+[data-theme="dark"] .card-val {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .mini-ahli {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .float-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+}
+
+[data-theme="dark"] .float-val {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .float-title {
+    color: #64748b;
+}
+
+[data-theme="dark"] .hero-stats {
+    border-top-color: #334155;
+}
+
+[data-theme="dark"] .stat-num {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .stat-divider {
+    background: #334155;
+}
+
+[data-theme="dark"] .hero-badge {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.25);
+}
+
+[data-theme="dark"] .section-tag {
+    background: rgba(59, 130, 246, 0.15);
+}
+
+[data-theme="dark"] .section-sub {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .ahliwaris-item {
+    background: #263348;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .ahliwaris-nama {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .ahliwaris-porsi {
+    color: #64748b;
+}
+
+[data-theme="dark"] .result-catatan {
+    background: rgba(217, 119, 6, 0.12);
+    border-color: rgba(217, 119, 6, 0.25);
+}
+
+[data-theme="dark"] .catatan-list li {
+    color: #cbd5e1;
+}
+
+[data-theme="dark"] .hasil-penjelasan {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .penjelasan-body {
+    background: #1e293b;
+}
+
+[data-theme="dark"] .penjelasan-umum {
+    background: rgba(37, 99, 235, 0.12);
+    border-color: rgba(59, 130, 246, 0.2);
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .tahapan-label {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .tahapan-line {
+    background: #334155;
+}
+
+[data-theme="dark"] .detail-ahliwaris-item {
+    background: #263348;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .detail-kv {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .detail-kv-val {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .detail-nama {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .detail-alasan {
+    background: rgba(37, 99, 235, 0.12);
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .detail-dalil {
+    background: rgba(217, 119, 6, 0.12);
+    color: #cbd5e1;
+}
+
+[data-theme="dark"] .hijab-panel {
+    background: #263348;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .hijab-item {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .hijab-nama {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .harta-summary-item {
+    background: #263348;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .harta-summary-label {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .harta-summary-item.highlight {
+    background: rgba(37, 99, 235, 0.18);
+}
+
+[data-theme="dark"] .detail-chip {
+    background: #263348;
+    border-color: #334155;
+    color: #94a3b8;
+}
+
+/* ── Dark mode — Tombol Download PDF ── */
+[data-theme="dark"] .btn-download-pdf {
+    color: #0f172a;
+}
+
+/* ── Dark mode — Result Cards (Improved) ── */
+[data-theme="dark"] .flow-item {
+    background: #263348;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .flow-item.flow-highlight {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(59, 130, 246, 0.08));
+    border-color: var(--blue-light);
+}
+
+[data-theme="dark"] .flow-step-icon {
+    background: #334155;
+    color: #94a3b8;
+    border-color: #475569;
+}
+
+[data-theme="dark"] .flow-label {
+    color: #64748b;
+}
+
+[data-theme="dark"] .flow-item.flow-highlight .flow-label {
+    color: var(--blue-light);
+}
+
+[data-theme="dark"] .flow-amount {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .flow-item.flow-highlight .flow-amount {
+    color: var(--blue-light);
+}
+
+[data-theme="dark"] .flow-amount.neg {
+    color: var(--gold-light);
+}
+
+[data-theme="dark"] .flow-connector {
+    background: #334155;
+}
+
+[data-theme="dark"] .aw-card {
+    background: #263348;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .aw-icon-wrap {
+    background: #334155;
+    border-color: #475569;
+}
+
+[data-theme="dark"] .aw-name {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .aw-status {
+    color: #64748b;
+}
+
+[data-theme="dark"] .aw-card.warna-gold .aw-total,
+[data-theme="dark"] .aw-card.warna-pasangan .aw-total {
+    color: var(--gold-light);
+}
+
+[data-theme="dark"] .aw-detail-pill {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .aw-detail-key {
+    color: #64748b;
+}
+
+[data-theme="dark"] .aw-detail-val {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .aw-alasan-box {
+    background: rgba(37, 99, 235, 0.12);
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .aw-section-label {
+    color: #64748b;
+}
+
+[data-theme="dark"] .aw-section-label::after {
+    background: #334155;
+}
+
+/* ============================================================
+         MODAL DARK MODE
+      ============================================================ */
+
+[data-theme="dark"] .modal-overlay {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+[data-theme="dark"] .modal-container,
+[data-theme="dark"] .ebook-container {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .modal-header {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    border-bottom-color: #334155;
+}
+
+[data-theme="dark"] .modal-header h3 {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .modal-section-title {
+    color: #f8fafc;
+    background: #263348;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .modal-narasi p {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .modal-dalil {
+    background: rgba(217, 119, 6, 0.1);
+    border-color: rgba(217, 119, 6, 0.25);
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .modal-problematika {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .ebook-toc {
+    background: #263348;
+    border-right-color: #334155;
+}
+
+[data-theme="dark"] .ebook-toc-link {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .ebook-toc-link:hover {
+    background: rgba(59, 130, 246, 0.1);
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .ebook-toc-link.active {
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--blue-light);
+}
+
+[data-theme="dark"] .chapter-title {
+    color: #f8fafc;
+}
+
+[data-theme="dark"] .chapter-body p {
+    color: #94a3b8;
+}
+
+[data-theme="dark"] .chapter-divider {
+    border-color: #334155;
+}
